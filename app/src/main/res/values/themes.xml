@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base app theme -->
+    <style name="Theme.KoloMapa2" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.KoloMapa2.Splash" parent="Theme.SplashScreen">
+        <!-- Set the splash screen background color (theme-aware) -->
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+
+        <!-- Set the app icon as the splash screen icon -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+
+        <!-- Set the theme to use after splash screen -->
+        <item name="postSplashScreenTheme">@style/Theme.KoloMapa2</item>
+    </style>
+</resources>
