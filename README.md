@@ -12,7 +12,7 @@ I can pick a trip from the main screen and send it over to the ESP via BLE, firs
 
 ## ESPs software
 The home screen contains smartphone like icons to "apps". The main one is obviously the map, which by default shows the current location. Pressing options brings up list of saved trips, clicking on it shows the preview and i can also start the navigation.
-When navigating, the map rotates based on the upcoming GPX track; it shows the next turn distance and arrow(just calculated based on the angle of the turn). There are also screens for the progress and elevation graph. The GPX is loaded into PSRAM(512kb allocated) and PSRAM is also used for caching the map tiles(~6MB allocated).
+When navigating, the map rotates based on the upcoming GPX track; it shows the next turn distance and arrow(just calculated based on the angle of the turn). There are also screens for the progress and elevation graph. The GPX is loaded into PSRAM_(512kb allocated)_ and PSRAM is also used for caching the map tiles_(~6MB allocated)_.
 Other apps include the spedometer, phone(which has music controls along with battery %), weather(phone fetches from an API the forecast and also rain radar images), tracker(for recording GPX tracks), info(was used for debugging, has GPS, SD and battery statuses) and also mines and snake games. Those not ideal but playable on the E-ink.
 
 ## Hardware
