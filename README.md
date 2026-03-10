@@ -3,16 +3,16 @@ An GPS navigation(originally intended for biking) with an E-ink screen, ESP32-S3
 This repository has code for the arduino project and an android app.
 
 ## Map format
-Its using standart raster 256x256px map tiles, right now from OSM, but can be changed to others.
-The tiles are saved on the SD card in a ZOOM_LEVEL/X/Y.tile folder structure as 1 bit bitmap images. 
+Its using standart raster 256x256px map tiles, right now from OSM, but can be changed to others.\
+The tiles are saved on the SD card in a ZOOM_LEVEL/X/Y.tile folder structure as 1 bit bitmap images.\
 
 ## Data flow
-Either import a GPX track or plan right inside the app(right now using project OSRM API), it downloads the required map tiles and saves them. 
-I can pick a trip from the main screen and send it over to the ESP via BLE, first gets sent the GPX and also the tiles. They are converted PNG to bitmap, compressed using RLE for faster transfers. The ESP is saving them to the SD card as they come. Its also appending an index of tiles, which is sent from the ESP to the app, so that only the missing tiles are sent.
+Either import a GPX track or plan right inside the app(right now using project OSRM API), it downloads the required map tiles and saves them.\ 
+I can pick a trip from the main screen and send it over to the ESP via BLE, first gets sent the GPX and also the tiles. They are converted PNG to bitmap, compressed using RLE for faster transfers.\ The ESP is saving them to the SD card as they come. Its also appending an index of tiles, which is sent from the ESP to the app, so that only the missing tiles are sent.
 
 ## ESPs software
 The home screen contains smartphone like icons to "apps". The main one is obviously the map, which by default shows the current location. Pressing options brings up list of saved trips, clicking on it shows the preview and i can also start the navigation.\
-When navigating, the map rotates based on the upcoming GPX track; it shows the next turn distance and arrow(just calculated based on the angle of the turn). There are also screens for the progress and elevation graph. The GPX is loaded into PSRAM(512kb allocated) and PSRAM is also used for caching the map tiles(~6MB allocated).
+When navigating, the map rotates based on the upcoming GPX track; it shows the next turn distance and arrow(just calculated based on the angle of the turn). There are also screens for the progress and elevation graph. The GPX is loaded into PSRAM(512kb allocated) and PSRAM is also used for caching the map tiles(~6MB allocated).\
 Other apps include the spedometer, phone(which has music controls along with battery %), weather(phone fetches from an API the forecast and also rain radar images), tracker(for recording GPX tracks), info(was used for debugging, has GPS, SD and battery statuses) and also mines and snake games. Those not ideal but playable on the E-ink.
 
 ## Hardware
