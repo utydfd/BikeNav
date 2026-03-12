@@ -1,6 +1,6 @@
 # BikeNav
 An GPS navigation(originally intended for biking) with an E-ink screen, ESP32-S3 MCU and an SD card.
-This repository has code for the arduino project and an android app.
+This repository contains code for the Arduino project and an Android app, as well as a PCB designed in KiCad and a case designed in Fusion 360.
 
 ## Map format
 It uses standard raster 256x256px map tiles, right now from OSM, but can be changed to others.
